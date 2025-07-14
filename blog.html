@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BLOG</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #000;
+      color: #e7e7e7;
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 8rem auto 4rem;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(127, 66, 167, 0.3);
+      position: relative;
+      z-index: 2;
+    }
+
+    h1, h2 {
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    h2 {
+      margin-top: 3rem;
+      font-size: 1.4rem;
+      color: #b48df4;
+    }
+
+    p, ul, li {
+      color: #aaa;
+      margin: 1rem 0;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      font-style: italic;
+      color: #666;
+      text-align: center;
+    }
+
+    /* Header like index2 */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 300;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #a56be8;
+    }
+
+    .btn-signing {
+      background-color: #a7a7a7;
+      color: black;
+      padding: 0.6rem 1.5rem;
+      border-radius: 50px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-signing:hover {
+      background-color: white;
+    }
+
+    /* Glowing Stars & Parallax */
+    .floating-stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .star {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 8px white;
+      transition: transform 0.2s ease;
+    }
+
+    .parallax-stars {
+      position: fixed;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      background: radial-gradient(white 1px, transparent 2px);
+      background-size: 50px 50px;
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 0.5rem;
+      }
+
+      .container {
+        margin: 6rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Parallax Layer + Stars -->
+  <div class="parallax-stars" id="parallax"></div>
+  <div class="floating-stars" id="stars"></div>
+
+  <!-- Header -->
+  <header>
+    <h1 data-aos="fade-down" data-aos-duration="1000">Raised</h1>
+    <nav>
+      <a data-aos="fade-down" data-aos-delay="100" href="index2.html">HOME</a>
+      <a data-aos="fade-down" data-aos-delay="200" href="#">FEATURES</a>
+      <a data-aos="fade-down" data-aos-delay="300" href="#">RESOURCES</a>
+    </nav>
+    <button class="btn-signing" data-aos="fade-down" data-aos-delay="400">
+      <a href="/login.html" style="text-decoration: none; color: inherit;">LOGIN</a>
+    </button>
+  </header>
+
+  <!-- Blog Content -->
+  <div class="container">
+    <h1 data-aos="fade-up">💻 From Confused Kid to Confident Coder: My Web Dev Journey at 15</h1>
+    <p data-aos="fade-up" data-aos-delay="100">Hey there! I’m 15 years old...</p>
+
+    <h2 data-aos="fade-up" data-aos-delay="200">🚀 How It All Started</h2>
+    <p data-aos="fade-up" data-aos-delay="300">I wasn’t some genius kid...</p>
+
+    <h2 data-aos="fade-up" data-aos-delay="400">🧱 The Struggles Were <em>Real</em></h2>
+    <ul data-aos="fade-up" data-aos-delay="500">
+      <li>Errors I couldn’t understand...</li>
+      <li>Imposter syndrome...</li>
+    </ul>
+
+    <h2 data-aos="fade-up" data-aos-delay="600">🧠 What Helped Me Push Through</h2>
+    <ul data-aos="fade-up" data-aos-delay="700">
+      <li>Project-based learning...</li>
+    </ul>
+
+    <h2 data-aos="fade-up" data-aos-delay="800">🌱 Advice to Anyone Just Starting</h2>
+    <ul data-aos="fade-up" data-aos-delay="900">
+      <li>Start small, but start now.</li>
+    </ul>
+
+    <h2 data-aos="fade-up" data-aos-delay="1000">🛣️ What’s Next?</h2>
+    <p data-aos="fade-up" data-aos-delay="1100">I want to keep leveling up...</p>
+
+    <h2 data-aos="fade-up" data-aos-delay="1200">🧡 Final Thoughts</h2>
+    <p data-aos="fade-up" data-aos-delay="1300">If you're reading this...</p>
+
+    <div class="footer" data-aos="fade-up" data-aos-delay="1400">
+      — A 15-Year-Old Coder Who Didn't Give Up
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Parallax
+    document.addEventListener('mousemove', (e) => {
+      const parallax = document.getElementById('parallax');
+      const x = (e.clientX / window.innerWidth - 0.5) * 20;
+      const y = (e.clientY / window.innerHeight - 0.5) * 20;
+      parallax.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    // Stars
+    const starsContainer = document.getElementById('stars');
+    const starCount = 30;
+    const stars = [];
+
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.dataset.angle = Math.random() * 360;
+      star.dataset.radius = 20 + Math.random() * 100;
+      star.dataset.speed = 0.2 + Math.random() * 0.5;
+      star.x = Math.random() * window.innerWidth;
+      star.y = Math.random() * window.innerHeight;
+      starsContainer.appendChild(star);
+      stars.push(star);
+    }
+
+    function animateStars() {
+      stars.forEach(star => {
+        const angle = parseFloat(star.dataset.angle);
+        const radius = parseFloat(star.dataset.radius);
+        const speed = parseFloat(star.dataset.speed);
+        const centerX = star.x;
+        const centerY = star.y;
+        const newX = centerX + radius * Math.cos(angle);
+        const newY = centerY + radius * Math.sin(angle);
+        star.style.transform = `translate(${newX}px, ${newY}px)`;
+        star.dataset.angle = angle + speed * 0.01;
+      });
+      requestAnimationFrame(animateStars);
+    }
+
+    animateStars();
+
+    document.addEventListener('mousemove', (e) => {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+      stars.forEach(star => {
+        const box = star.getBoundingClientRect();
+        const starX = box.left + box.width / 2;
+        const starY = box.top + box.height / 2;
+        const dx = starX - mouseX;
+        const dy = starY - mouseY;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 100) {
+          const angle = Math.atan2(dy, dx);
+          const repelDist = (100 - dist) * 2;
+          const offsetX = Math.cos(angle) * repelDist;
+          const offsetY = Math.sin(angle) * repelDist;
+          star.style.transform = `translate(${starX + offsetX}px, ${starY + offsetY}px)`;
+          setTimeout(() => {
+            star.style.transform = '';
+          }, 300);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+s
